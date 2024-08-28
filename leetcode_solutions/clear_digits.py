@@ -1,6 +1,3 @@
-from typing import List
-
-
 class Node:
     def __init__(self, data):
         self.data = data
@@ -28,30 +25,16 @@ class Solution:
             data = temp.data
             self.head = temp.next
             return data
-
-    def calPoints(self, operations: List[str]) -> int:
-        for s in operations:
-            if s == '+':
-                x = self.pop()
-                y = self.pop()
-                t = x + y
-                self.push(y)
-                self.push(x)
-                self.push(x + y)
-            elif s == 'D':
-                x = self.peek()
-                self.push(x*2)
-            elif s == 'C':
+    def clearDigits(self, s: str) -> str:
+        for char in s:
+            if char.isalpha():
+                self.push(char)
+            elif char.isdigit():
                 self.pop()
-            else:
-                self.push(int(s))
-        total = 0
-        while not self.isEmpty():
-            total += self.pop()
-            
-        return total
-    
+        result = ''
 
-if __name__ == '__main__':
-    solution = Solution()
-    print(solution.calPoints(["5","2","C","D","+"])) 
+        while not self.isEmpty():
+            result += self.pop()
+        return result[::-1]
+
+        
