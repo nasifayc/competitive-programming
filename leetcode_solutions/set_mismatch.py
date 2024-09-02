@@ -1,9 +1,5 @@
-
-from typing import List
-
-
 class Solution:
-    def findDisappearedNumbers(self, nums: List[int]) -> List[int]:
+    def findErrorNums(self, nums: List[int]) -> List[int]:
         i = 0
         while i < len(nums):
             correct = nums[i] -1
@@ -15,9 +11,8 @@ class Solution:
         result = []
         for i in range(len(nums)):
             if nums[i] != i + 1:
+                result.append(nums[i])
                 result.append(i + 1)
+                break
         return result
-
-    
-
-
+        
