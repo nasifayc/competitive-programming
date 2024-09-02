@@ -9,4 +9,4 @@ def cyclic_sort(arr):
     return arr
 
 
-print(cyclic_sort([5,4,3,2,1,5,2]))
+print(cyclic_sort([5,4,3,2,1]))
