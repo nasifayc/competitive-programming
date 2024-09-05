@@ -27,7 +27,6 @@ def merge(arr, low, mid, high):
         right += 1
     
     for i in range(low, high+1):
-        print(low)
         arr[i] = temp[i-low]
 
 
