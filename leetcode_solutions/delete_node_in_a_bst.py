@@ -8,7 +8,7 @@ class Solution:
     def findMin(self,root):
         curr = root
         while curr and curr.left:
-            curr = curr.next
+            curr = curr.left
         return curr
 
     def deleteNode(self, root: Optional[TreeNode], key: int) -> Optional[TreeNode]:
