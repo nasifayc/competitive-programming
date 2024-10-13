@@ -64,3 +64,5 @@ if __name__ == '__main__':
     heap.push(2)
     heap.push(7)
     heap.print()
+    
+    # heapq is python built in function to impliment heap a.k.a priority queue
