@@ -1,15 +1,11 @@
-from typing import List
-
-
 class Solution:
-    def twoSum(self, numbers: List[int], target: int) -> List[int]:
-        i,j = 0, len(numbers) - 1
-        result = [0,0]
-        while i < j:
-            if numbers[i] + numbers[j] == target:
-                return [i+1, j+1]
-            elif numbers[i] + numbers[j] > target:
-                j -= 1
-            else:
-                i += 1
-        return result
+    
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        hash = {}
+        for i, n in enumerate(nums):
+            dif = target - n
+            if dif in hash:
+                return [i, hash[dif]]
+            hash[n] = i
+             
+        return []
