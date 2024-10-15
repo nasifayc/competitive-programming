@@ -1,5 +1,7 @@
 from typing import Counter
 
 
-s = 'eat'
-print(Counter(s))
+s = [1,1,2,2,3,3,3,3]
+
+hashtable = Counter(s)
+print(list(hashtable.values()))
