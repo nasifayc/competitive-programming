@@ -20,3 +20,5 @@ def memo(r,c,rows,cols, cache):
     
     return cache[r][c]
     
+    
+    
