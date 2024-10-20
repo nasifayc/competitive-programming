@@ -3,7 +3,7 @@
 def bruteForce(r,c,rows,cols):
     if r == rows or c == cols:
         return 0
-    if r == rows - 1 or c == cols-1:
+    if r == rows - 1 and c == cols-1:
         return 1
     return (bruteForce(r+1,c,rows,cols) + bruteForce(r+1,c,rows,cols))
 
@@ -14,7 +14,7 @@ def memo(r,c,rows,cols, cache):
         return 0
     if cache[r][c] > 0:
         return cache[r][c]
-    if r == rows - 1 or c == cols-1:
+    if r == rows - 1 and c == cols-1:
         return 1
     cache[r][c] = memo(r+1,c,rows,cols,cache) + memo(r,c+1,rows,cols,cache)
     
