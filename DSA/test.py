@@ -1,6 +1,7 @@
-import re
+from typing import Counter
 
 
-s = "0P"
-cleaned_phrase = re.sub(r'[^a-zA-Z]', '', s).lower()
-print(cleaned_phrase)
+nums = [0,0,1,1,1,2,2,3,3,4]
+l = Counter(nums)
+
+print(l.__len__()) // 5
