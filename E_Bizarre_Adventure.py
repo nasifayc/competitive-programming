@@ -39,4 +39,4 @@ test_cases = [input().strip() for _ in range(t)]
 results = max_area_of_ones(t, test_cases)
 
 for result in results:
-    print(result)
+    print(result) #test
