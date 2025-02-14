@@ -27,11 +27,11 @@ class Heap:
         # Percolate down
         while i * 2 < len(self.heap):
             if (i * 2 + 1 < len(self.heap)) and self.heap[i * 2 + 1] < self.heap[i * 2] and self.heap[i] > self.heap[i * 2 + 1]:
-                # Swap right child
+               
                 self.heap[i], self.heap[i * 2 + 1] = self.heap[i * 2 + 1], self.heap[i]
                 i = i * 2 + 1
             elif self.heap[i] > self.heap[i * 2]:
-                # Swap left child
+            
                 self.heap[i], self.heap[i * 2] = self.heap[i * 2], self.heap[i]
                 i = i * 2
             else:

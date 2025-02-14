@@ -16,6 +16,6 @@ class Solution:
 if __name__ == '__main__':
     s = Solution()
     arr = [2, 3, 4, 10,40, 90 ,100 ]
-    target = 6
+    target = 10
     result = s.binarySearch(arr, 0, len(arr)-1, target)
     print(f'The target {target} is found at index {result}')

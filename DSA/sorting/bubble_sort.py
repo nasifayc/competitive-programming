@@ -12,7 +12,7 @@ class Solution:
 
 if __name__ == '__main__':
     solution = Solution()
-    nums = [64, 34, 25, 12, 22, 11, 90]
+    nums = [64, 34, 25, 12,90]
     print('Unsorted array:', nums)
     solution.bubble_sort(nums)
     print('Sorted array:', nums)
